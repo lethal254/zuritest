@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const maintenancevendingmachine_1 = require("../controllers/maintenancevendingmachine");
+const router = (0, express_1.Router)();
+router.post("/setQuantity", maintenancevendingmachine_1.setQuantity);
+router.post("/setPrices", maintenancevendingmachine_1.setPrices);
+router.post("/setChange", maintenancevendingmachine_1.setChange);
+router.get("/inventory", maintenancevendingmachine_1.getInventory);
+exports.default = router;
